@@ -17,4 +17,6 @@ WORKDIR /app
 RUN python3 -m venv /app/py-env/effective-guacamole
 
 RUN . /app/py-env/effective-guacamole/bin/activate && \
-    pip install google-generativeai
+    pip install -q -U google-genai
+
+COPY src /app/src
